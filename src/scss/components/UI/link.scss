@@ -1,0 +1,10 @@
+@import '../../modules/colors';
+
+@mixin link($color: $color_main, $weight: 400){
+  color: $color;
+  text-decoration: none;
+  transition: all .1s ease-in-out;
+  &:hover{
+    color: $color_cyan-lightest;
+  }
+}

@@ -1,0 +1,178 @@
+@import "../modules/mixins";
+@import "../modules/fonts";
+@import "../modules/colors";
+@import "../modules/container";
+@import "../modules/transitions/slider_transitions";
+@import "../modules/media";
+@import "../components/UI/button";
+@import "../components/UI/pagination";
+@import "../components/offers/offers-transitions";
+
+$border-radius: 5px;
+
+.offers {
+  @include container;
+  position: relative;
+  margin-bottom: 41px;
+  overflow: visible;
+
+  &__list {
+    @include offers-transitions;
+    margin-bottom: 27px;
+    min-width: 340px;
+    height: 536px;
+
+    @include desktop {
+      height: 440px;
+    }
+
+    &__item {
+      @include flex;
+      @include column;
+      @include align-start;
+      position: absolute;
+      padding: 191px 30px 42px 23px;
+      background-color: $color_cyan-pale;
+      opacity: 0;
+      border-radius: $border-radius;
+      background-position: top;
+      background-repeat: no-repeat;
+      width: 100%;
+
+      &--current {
+        opacity: 1;
+        z-index: 1;
+      }
+
+      @include tablet {
+        padding-left: 56px;
+      }
+
+      @include desktop {
+        padding: 53px 0 56px 63px;
+        @include container;
+        width: 100%;
+      }
+
+      &-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        width: 100%;
+        height: 169px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include desktop {
+          height: 100%;
+          left: unset;
+          right: 0;
+          top: 0;
+          width: 100%;
+          background-image: url("../../src/assets/images/offers/offer-1-1200.png");
+          clip-path: polygon(41% 0, 100% 0, 100% 100%, 55% 100%);
+          border-bottom-right-radius: $border-radius;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: 100px;
+        }
+      }
+
+      &-title {
+        font-size: $fs26;
+        line-height: $lh_large;
+        font-weight: $fw_bold;
+        margin-bottom: 10px;
+
+        @include desktop {
+          font-size: $fs38;
+        }
+
+        &--small {
+          display: block;
+          font-size: $fs14;
+          line-height: $lh_main;
+          font-weight: $fw_bold;
+          margin-bottom: 0;
+
+          @include desktop {
+            font-size: $fs22;
+          }
+        }
+      }
+
+      &__dots {
+        @include flex;
+        @include flex-between;
+        @include align-start;
+        flex-direction: column;
+        margin-bottom: 17px;
+        row-gap: 7px;
+
+        &-item {
+          position: relative;
+          padding-left: 16px;
+          font-size: $fs14;
+          line-height: 145%;
+
+          @include desktop {
+            font-size: $fs16;
+          }
+
+          &:after {
+            content: "";
+            left: 0;
+            top: 7px;
+            position: absolute;
+            display: block;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: $color_cyan-medium;
+          }
+        }
+      }
+
+      &__pricing {
+        &-value {
+          @include flex;
+          font-size: $fs18;
+          column-gap: 10px;
+          margin-bottom: 27px;
+
+          @include desktop {
+            font-size: $fs20;
+            line-height: $lh_large;
+          }
+
+          &--deleted {
+            color: $color_disabled;
+            font-size: $fs14;
+
+            @include desktop {
+              font-size: $fs16;
+            }
+          }
+        }
+      }
+
+      &__buttons {
+        @include flex;
+        &-button {
+          &--cyan {
+            @extend %button--cyan;
+          }
+          &--transparent {
+            @extend %button--transparent;
+          }
+        }
+      }
+    }
+  }
+  &__controller {
+    @include pagination;
+  }
+}

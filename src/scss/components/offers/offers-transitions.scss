@@ -1,0 +1,30 @@
+@import '../../modules/transitions/slider_transitions';
+
+@mixin offers-transitions{
+  &--slide-right{
+    .offers__list__item{
+      &--prev{
+
+      }
+      &--current{
+        @include currentSlideRight();
+      }
+      &--prev{
+        @include prevSlideLeft();
+      }
+    }
+  }
+
+  &--slide-left{
+    .offers__list__item{
+      &--next{
+        @include nextSlideRight();
+      }
+      &--current{
+        @include currentSlideLeft();
+      }
+    }
+  }
+
+
+}

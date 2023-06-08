@@ -1,0 +1,61 @@
+@import "colors";
+@import "fonts";
+@import "container";
+
+
+
+@mixin flex{
+  display: flex;
+}
+
+@mixin flex-center{
+  @include flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin column{
+    flex-direction: column;
+}
+
+@mixin flex-between{
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@mixin container{
+  max-width: $container_width;
+  margin: 0 auto;
+
+  @include tablet{
+    max-width: 70vw;
+
+  }
+
+  @include desktop{
+    max-width: $container_desktop;
+  }
+}
+
+
+
+@mixin align-center{
+  align-items: center;
+}
+
+@mixin justify-center{
+    justify-content: center;
+}
+
+@mixin align-start{
+  align-items: flex-start;
+}
+
+@mixin column-reverse{
+  flex-direction: column-reverse;
+}
+
+@mixin justify-start{
+    justify-content: flex-start;
+}

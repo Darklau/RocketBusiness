@@ -1,0 +1,108 @@
+@import "../modules/mixins";
+@import "../modules/fonts";
+@import "../modules/colors";
+@import "../modules/container";
+@import "../modules/transitions/fade";
+@import "../modules/media";
+@import "../components/UI/button";
+@import "../components/UI/pagination";
+@import "../components/offers/offers-transitions";
+
+%input {
+  font-size: 10px;
+  min-width: 200px;
+  padding: 5px;
+  color: $color_main;
+  font-weight: bold;
+  background-color: $color-cyan_pale;
+  border-radius: 15px;
+  border: none;
+
+  width: 100%;
+}
+
+.modal {
+  height: 100%;
+  @include flex;
+  @include column;
+  @include align-center;
+  @include justify-center;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 0;
+
+  &--active {
+    @include fade-in;
+    display: flex;
+  }
+
+  @include desktop {
+    padding: 20%;
+    justify-content: start;
+  }
+  &__form {
+    min-width: 50%;
+    @include flex;
+    @include column;
+    @include align-center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 20px;
+    border-radius: 40px;
+    row-gap: 10px;
+    background-color: white;
+    &__input {
+      width: 100%;
+
+      &-label {
+        display: block;
+        font-size: $fs13;
+        line-height: $lh_main;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"] {
+        @extend %input;
+      }
+
+      select {
+        @extend %input;
+      }
+
+      textarea {
+        @extend %input;
+        max-height: 150px;
+        resize: none;
+      }
+    }
+
+    &-button {
+      @extend %button--cyan;
+    }
+    &-title {
+      width: 100%;
+      text-align: start;
+      font-size: $fs18;
+      line-height: $lh_large;
+      font-weight: bold;
+      margin-bottom: 9px;
+      max-width: 416px;
+      @include desktop {
+        font-size: $fs26;
+      }
+    }
+
+    &-close {
+      cursor: pointer;
+      position: absolute;
+      right: 25px;
+      top: 25px;
+    }
+  }
+}

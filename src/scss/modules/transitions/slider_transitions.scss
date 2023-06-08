@@ -1,0 +1,63 @@
+@mixin currentSlideRight($time: 1s) {
+  opacity: 1;
+  animation: move-in-left $time ease-in-out forwards;
+}
+
+@mixin prevSlideLeft($time: 1s) {
+  opacity: 1;
+  animation: move-away-left $time ease-in-out forwards;
+}
+
+@mixin currentSlideLeft($time: 1s) {
+  opacity: 1;
+  animation: move-in-right $time ease-in-out forwards;
+}
+
+@mixin nextSlideRight($time: 1s) {
+  opacity: 1;
+  animation: move-away-right $time ease-in-out forwards;
+}
+
+@keyframes move-away-left {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes move-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes move-away-right {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes move-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

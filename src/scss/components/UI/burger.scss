@@ -1,0 +1,52 @@
+@import "../../modules/container";
+@import "../../modules/colors";
+@import "../../modules/media";
+
+@mixin burger_stick {
+  position: absolute;
+  left: 0;
+  width: 37px;
+  height: 4px;
+  background-color: $color_cyan-medium;
+  transition: all 0.3s ease-in-out;
+
+  &:first-child {
+    top: 0;
+  }
+  &:nth-child(2) {
+    top: 50%;
+  }
+  &:last-child {
+    top: 100%;
+  }
+}
+
+@mixin burger {
+  cursor: pointer;
+  position: relative;
+  width: 37px;
+  height: 26px;
+  margin-right: 43px;
+
+  &-stick {
+    @include burger_stick;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
+  &--active {
+    .header__top__burger-stick {
+      &:first-child {
+        transform: translateY(13px) rotate(-135deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:last-child {
+        transform: translateY(-13px) rotate(135deg);
+      }
+    }
+  }
+}

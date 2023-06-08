@@ -1,0 +1,29 @@
+.offers__item {
+  max-width: 340px;
+  margin: 0 auto;
+  display: flex;
+  background-color: #0DBC91;
+}
+.offers__item__dots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.offers__item__dots-item {
+  position: relative;
+  padding-left: 16px;
+}
+.offers__item__dots-item:after {
+  content: "";
+  left: 0;
+  top: 5px;
+  position: absolute;
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #1FA181;
+}
+
+/*# sourceMappingURL=offers.css.map */

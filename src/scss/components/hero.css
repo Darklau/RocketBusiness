@@ -1,0 +1,15 @@
+.hero__content {
+  max-width: 340px;
+  margin: 0 auto;
+}
+.hero__content-title {
+  font-size: 26px;
+  line-height: 130%;
+  font-weight: bold;
+}
+.hero__content-text {
+  font-size: 13px;
+  line-height: 150%;
+}
+
+/*# sourceMappingURL=hero.css.map */

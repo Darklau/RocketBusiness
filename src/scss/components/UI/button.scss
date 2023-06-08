@@ -1,0 +1,54 @@
+@import "../../modules/fonts";
+@import "../../modules/mixins";
+
+%button {
+  font-size: $fs14;
+  line-height: $lh_main;
+  cursor: pointer;
+  border: none;
+  padding: 11px 24px 11px 23px;
+  border-radius: 50px;
+  min-height: 43px;
+  min-width: 137px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  &:hover {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+%button--white {
+  @extend %button;
+  background-color: white;
+  color: $color_cyan-medium;
+  font-weight: bold;
+
+  &:hover {
+    background-color: $color_cyan-medium;
+    color: white;
+  }
+}
+
+%button--cyan {
+  @extend %button;
+  background-color: $color_cyan-light;
+  color: $color_cyan_pale;
+
+  &:hover {
+    background-color: $color_cyan-medium;
+
+    color: white;
+  }
+}
+
+%button--transparent {
+  @extend %button;
+  background-color: transparent;
+  color: $color_cyan-light;
+  outline: 1px solid $color_cyan-light;
+
+  &:hover {
+    outline: none;
+    background-color: $color_cyan-lightest;
+    color: white;
+  }
+}

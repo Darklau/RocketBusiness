@@ -1,0 +1,80 @@
+@import "../modules/mixins";
+@import "../modules/container";
+@import "../modules/fonts";
+@import "../modules/media";
+
+.hero {
+  @include flex;
+
+  @include mobile {
+    @include column
+  }
+  @include align-center;
+  @include justify-center;
+  background-color: $color_cyan_white;
+  height: 532px;
+  padding-bottom: 53px;
+  margin-bottom: 49px;
+
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+
+  @include desktop {
+    padding-bottom: 40px;
+    margin-bottom: 101px;
+  }
+
+  &-img {
+    object-fit: cover;
+    object-position: center;
+    width: 375px;
+    height: 288px;
+    margin: 0 auto 35px;
+
+    @include tablet {
+      margin-bottom: 0;
+      left: 50%;
+      min-width: 50%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    @include container;
+
+    &-title {
+      font-size: $fs26;
+      line-height: $lh_large;
+      font-weight: bold;
+      margin-bottom: 9px;
+      max-width: 416px;
+      @include desktop {
+        font-size: $fs36;
+      }
+    }
+
+    &-text {
+      font-size: $fs14;
+      line-height: $lh_main;
+      max-width: 367px;
+
+      @include tablet{      max-width: 223px;}
+
+    }
+
+    @include tablet {
+      margin: 0;
+      padding-left:14vw;
+      width: 100%;
+      @include flex;
+      @include column;
+      @include align-start;
+    }
+
+    @include desktop{
+      padding-left: $container_desktop_padding;
+      max-width: unset;
+    }
+  }
+}

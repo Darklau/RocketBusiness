@@ -1,0 +1,134 @@
+@import "../../modules/mixins";
+@import "../../modules/container";
+@import "../../components/UI/burger";
+@import "../../components/UI/link";
+@import "../../components/UI/button";
+@import "../../modules/media";
+
+@mixin header-top {
+  z-index: 3;
+  min-height: 65px;
+  width: 100%;
+  @include container;
+  @include flex;
+  @include align-center;
+  &__burger {
+    @include burger;
+  }
+
+  &__contacts {
+    @include flex;
+
+    flex-grow: 1;
+
+    &__left {
+      @include flex;
+      @include align-center;
+      margin-right: 60px;
+
+      &-logo {
+        @include flex;
+        @include align-center;
+
+        img {
+          object-position: center center;
+          max-width: 62px;
+          max-height: 18px;
+
+          @include desktop {
+            max-width: unset;
+            max-height: unset;
+            width: 94px;
+            height: 61px;
+          }
+        }
+      }
+    }
+
+    &__addresses {
+      @include flex-between;
+      @include flex;
+      align-items: flex-end;
+      flex-grow: 1;
+      flex-direction: column-reverse;
+
+      @include desktop {
+        @include align-center;
+        flex-direction: row;
+        margin-right: 35px;
+      }
+
+      &__address {
+        @include flex;
+        @include column;
+        position: relative;
+        font-style: normal;
+
+        &-top {
+          font-size: $fs13;
+          text-align: right;
+          font-style: normal;
+        }
+
+        &-icon {
+          display: none;
+
+          @include desktop {
+            display: inline;
+          }
+          height: 18.75px;
+          position: absolute;
+          left: -20px;
+          top: 2px;
+        }
+
+        &-bottom {
+          font-size: $fs13;
+          color: $color_disabled;
+          display: none;
+
+          @include desktop {
+            display: inline;
+          }
+        }
+      }
+
+      &__phone {
+        @include flex;
+        @include align-center;
+        a {
+          font-weight: bold;
+          font-size: $fs16;
+          line-height: $lh_main;
+          @include link($color: $color_main, $weight: 400);
+        }
+
+        img {
+          display: none;
+          margin-right: 13px;
+
+          @include desktop {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    &__contacts-logo {
+    }
+
+    &__right {
+      @include flex;
+      @include align-center;
+      &-button {
+        display: none;
+
+        @extend %button--cyan;
+
+        @include desktop {
+          display: flex;
+        }
+      }
+    }
+  }
+}

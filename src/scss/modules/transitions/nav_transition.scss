@@ -1,0 +1,35 @@
+@import '../../components/UI/button';
+@import '../mixins';
+@import '../media';
+
+@mixin nav-transition{
+  position: absolute;
+  &--active{
+    display: block;
+    animation: fade-in 0.2s ease-in-out;
+
+    .header__bottom__nav{
+      @include flex;
+      @include column;
+      row-gap: 39px;
+        display: flex;
+
+      @include desktop{
+        flex-direction: row;
+      }
+
+      &-button{
+        @extend %button--white;
+        display: flex;
+        width: 196px;
+        height: 10px;
+
+        @include desktop{
+          display: none;
+        }
+      }
+
+    }
+  }
+}
+

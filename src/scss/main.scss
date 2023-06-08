@@ -1,0 +1,39 @@
+@import 'https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Ubuntu:wght@400;700&display=swap';
+@import "./reset.scss";
+@import "modules/fonts";
+@import "modules/colors";
+@import 'modules/container';
+@import './modules/mixins';
+@import './components/header';
+@import './components/hero';
+@import './components/offers';
+@import './components/footer';
+@import './components/modal';
+
+
+body{
+    font-family: $font_main;
+    font-size: $fs16;
+    line-height: $lh_main;
+    color: $color_main;
+}
+
+.lock {
+  overflow: hidden;
+  @include desktop {
+    overflow: unset;
+  }
+}
+
+img{
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+
+

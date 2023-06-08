@@ -1,0 +1,36 @@
+$font_main: 'PT Sans Caption', sans-serif;
+$font_secondary: "Ubuntu", sans-serif;
+$fs13: 13px;
+$fs14: 14px;
+$fs16: 16px;
+$fs18: 18px;
+$fs20: 20px;
+$fs22: 22px;
+$fs26: 26px;
+$fs36: 36px;
+$fs38: 38px;
+$lh_main: 150%;
+$lh_large: 130%;
+$fw_normal: 400;
+$fw_bold: 700;
+
+
+@mixin fs_small{
+  font-size: $fs13;
+}
+
+@mixin fs_small-medium{
+  font-size: $fs14;
+}
+
+@mixin fs_main{
+  font-size: $fs16;
+}
+
+@mixin fs_large{
+  font-size: $fs26;
+}
+
+@mixin fs_larger{
+  font-size: $fs36;
+}

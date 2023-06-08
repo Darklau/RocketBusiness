@@ -1,0 +1,72 @@
+@import "../modules/mixins";
+@import "../modules/container";
+
+$color_footer: #08664f;
+
+.footer {
+  background-color: $color_footer;
+  &__content {
+    @include container;
+    @include flex;
+    justify-content: space-between;
+    padding-top: 41px;
+
+    @include desktop {
+      padding-top: 59px;
+      padding-bottom: 59px;
+    }
+
+    &__logo {
+      margin-bottom: 31px;
+      @include desktop {
+        margin-bottom: 0;
+      }
+    }
+
+    &__nav {
+      padding-bottom: 41px;
+
+      @include desktop {
+        @include flex;
+        @include flex-between;
+        padding: 0;
+
+        flex-direction: row;
+
+        flex-grow: 1;
+        max-width: (237 + 430 + 91) * 1px;
+      }
+
+      &__list {
+        @include flex;
+        @include column;
+        row-gap: 15px;
+        &-item {
+          a {
+            @include link($color: white);
+          }
+        }
+        @include desktop {
+          flex-direction: row;
+
+          column-gap: 30px;
+        }
+      }
+    }
+
+    &__social {
+      @include flex;
+      column-gap: 20px;
+      &-item {
+        img {
+          object-fit: contain;
+          max-width: 23px;
+          max-height: 23px;
+        }
+      }
+    }
+
+    &__social-link {
+    }
+  }
+}
