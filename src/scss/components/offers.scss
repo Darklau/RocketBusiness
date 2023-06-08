@@ -44,7 +44,7 @@ $border-radius: 5px;
         z-index: 1;
       }
 
-      @include tablet {
+      @include desktop {
         padding-left: 56px;
       }
 

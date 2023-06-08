@@ -88,10 +88,10 @@ input {
 .offers__list__item__buttons-button--transparent {
   background-color: transparent;
   color: #0DBC91;
-  outline: 1px solid #0DBC91;
+  border: 1px solid #0DBC91;
 }
 .offers__list__item__buttons-button--transparent:hover {
-  outline: none;
+  border: none;
   background-color: #00D29F;
   color: white;
 }
@@ -133,10 +133,10 @@ input {
 .offers__list__item__buttons-button--transparent {
   background-color: transparent;
   color: #0DBC91;
-  outline: 1px solid #0DBC91;
+  border: 1px solid #0DBC91;
 }
 .offers__list__item__buttons-button--transparent:hover {
-  outline: none;
+  border: none;
   background-color: #00D29F;
   color: white;
 }
@@ -583,10 +583,10 @@ input {
 .offers__list__item__buttons-button--transparent {
   background-color: transparent;
   color: #0DBC91;
-  outline: 1px solid #0DBC91;
+  border: 1px solid #0DBC91;
 }
 .offers__list__item__buttons-button--transparent:hover {
-  outline: none;
+  border: none;
   background-color: #00D29F;
   color: white;
 }
@@ -691,7 +691,7 @@ input {
   opacity: 1;
   z-index: 1;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .offers__list__item {
     padding-left: 56px;
   }
@@ -973,10 +973,10 @@ input {
 .offers__list__item__buttons-button--transparent {
   background-color: transparent;
   color: #0DBC91;
-  outline: 1px solid #0DBC91;
+  border: 1px solid #0DBC91;
 }
 .offers__list__item__buttons-button--transparent:hover {
-  outline: none;
+  border: none;
   background-color: #00D29F;
   color: white;
 }

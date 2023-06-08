@@ -44,10 +44,10 @@
   @extend %button;
   background-color: transparent;
   color: $color_cyan-light;
-  outline: 1px solid $color_cyan-light;
+  border: 1px solid $color_cyan-light;
 
   &:hover {
-    outline: none;
+    border: none;
     background-color: $color_cyan-lightest;
     color: white;
   }
