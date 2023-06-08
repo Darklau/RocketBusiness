@@ -89,6 +89,7 @@ input {
   background-color: transparent;
   color: #0DBC91;
   border: 1px solid #0DBC91;
+  margin: -1px;
 }
 .offers__list__item__buttons-button--transparent:hover {
   border: none;
@@ -134,6 +135,7 @@ input {
   background-color: transparent;
   color: #0DBC91;
   border: 1px solid #0DBC91;
+  margin: -1px;
 }
 .offers__list__item__buttons-button--transparent:hover {
   border: none;
@@ -584,6 +586,7 @@ input {
   background-color: transparent;
   color: #0DBC91;
   border: 1px solid #0DBC91;
+  margin: -1px;
 }
 .offers__list__item__buttons-button--transparent:hover {
   border: none;
@@ -974,6 +977,7 @@ input {
   background-color: transparent;
   color: #0DBC91;
   border: 1px solid #0DBC91;
+  margin: -1px;
 }
 .offers__list__item__buttons-button--transparent:hover {
   border: none;
@@ -1044,7 +1048,7 @@ input {
   display: none;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 4;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   padding: 0;
